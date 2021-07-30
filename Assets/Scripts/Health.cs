@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
 {
     [SerializeField]
     private int MaxHealth = 100;
+    [SerializeField]
+    private int getDamage = 20;
 
     private int CurrentHealth;
 
@@ -25,11 +27,12 @@ public class Health : MonoBehaviour
         OnHealthPctChanged(currentHealthPct);
     }
 
-    private void Update()
+    
+    private void OnCollisionEnter(Collision collision)
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if(collision.gameObject.CompareTag("playerbullet"))
         {
-            ModifyHealth(-10);
+            ModifyHealth(-getDamage);
         }
     }
 }

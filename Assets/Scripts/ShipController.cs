@@ -41,10 +41,10 @@ public class ShipController : MonoBehaviour
         screenCenter.x = Screen.width * .5f;
         screenCenter.y = Screen.height * .5f;
 
-        //xyz.Play();
-        abc = xyz.emission.rateOverTime;
+        xyz.Play();
+        //abc = xyz.emission.rateOverTime;
         abc = 0f;
-        //Debug.Log(xyz);
+        
 
         Cursor.lockState = CursorLockMode.Confined;
         Vector2 hotSpot = new Vector2(currsor.width / 2f, currsor.height / 2f);
@@ -70,13 +70,13 @@ public class ShipController : MonoBehaviour
 
         if(boosting)
         {
-            abc = Mathf.Lerp(0f, 200f, 1f);
+            //abc = Mathf.Lerp(0f, 200f, 1f);
             activeForwardSpeed = Mathf.Lerp(activeForwardSpeed ,  forwardSpeed * boostingSpeed * Time.deltaTime, (ForwardAcceleration+boostingAcceleration) * Time.deltaTime);
         }
         else
         {
-            //xyz.Play();
-            abc = Mathf.Lerp(200f, 0f, 1f);
+            xyz.Play();
+            //abc = Mathf.Lerp(200f, 0f, 1f);
             activeForwardSpeed = Mathf.Lerp(activeForwardSpeed, Input.GetAxisRaw("Vertical") * forwardSpeed * Time.deltaTime, ForwardAcceleration * Time.deltaTime);
         }
 

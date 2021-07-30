@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 872594184}
   m_Layer: 0
   m_Name: Prefab_Projectile_Laser_Player
-  m_TagString: Untagged
+  m_TagString: playerbullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
+  camerashake: {fileID: 0}
   Bullettype: 0
   hitFVX: {fileID: 7516004826788876440, guid: fe8624b8239b6d44e8dba978b745de2a, type: 3}
 --- !u!1 &8947639800086150646

@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Turrent
   - BossShip
+  - playerbullet
   layers:
   - Default
   - TransparentFX
